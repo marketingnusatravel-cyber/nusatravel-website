@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUSATRAVEL - Premium Travel Agency</title>
+    <meta name="description"
+        content="Travel Mudah Bersama NUSATRAVEL. Trusted travel packages with organized itineraries and affordable prices.">
+    <!-- Google Fonts: Strong Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">NUSA<span class="text-red">TRAVEL</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#pakej">Pakej</a></li>
+                <li><a href="#tentang-kami">Tentang Kami</a></li>
+                <li><a href="#testimoni">Testimoni</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#hubungi">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content reveal fade-up">
+            <span class="hero-badge reveal zoom-in delay-1">Premium Travel Agency</span>
+            <h1 class="reveal fade-up delay-2">Travel Dengan Mudah<br>Bersama <span
+                    class="text-red-highlight">NUSATRAVEL</span></h1>
+            <p class="hero-subtitle reveal fade-up delay-3">Trusted travel packages with organized itineraries and
+                affordable prices.</p>
+            <div class="hero-cta reveal fade-up delay-4">
+                <a href="#pakej" class="btn btn-primary">Lihat Pakej</a>
+                <a href="#hubungi" class="btn btn-outline-white"><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</a>
+            </div>
+
+            <div class="trust-highlights reveal fade-up delay-5">
+                <div class="highlight-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Pakej Pilihan</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-tag"></i>
+                    <span>Harga Berpatutan</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>Fast Response</span>
+                </div>
+                <div class="highlight-item">
+                    <i class="fas fa-globe-asia"></i>
+                    <span>Destinasi Antarabangsa</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section id="pakej" class="packages-section py-large bg-white">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <h2>Pakej Istimewa Kami</h2>
+                <div class="header-line"></div>
+                <p>Pilih destinasi percutian impian anda dari koleksi pakej popular kami.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters reveal fade-up delay-1">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">Semua Destinasi</button>
+                    <button class="filter-btn" data-filter="indonesia">Indonesia</button>
+                    <button class="filter-btn" data-filter="china">China</button>
+                    <button class="filter-btn" data-filter="other-asia">Other Asia</button>
+                    <button class="filter-btn" data-filter="europe">Europe / Int.</button>
+                </div>
+                <div class="sort-group">
+                    <div class="custom-select">
+                        <select id="sortPrices">
+                            <option value="default">Susun mengikut Harga</option>
+                            <option value="low-to-high">Rendah ke Tinggi</option>
+                            <option value="high-to-low">Tinggi ke Rendah</option>
+                        </select>
+                        <i class="fas fa-chevron-down select-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package Grid -->
+            <div class="package-grid" id="packagesContainer">
+                <!-- Cards injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Detail Modal -->
+    <div id="packageModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-body">
+                <!-- Modal content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="tentang-kami" class="about-section py-large bg-light">
+        <div class="container flex-row">
+            <div class="about-content flex-half reveal fade-right">
+                <span class="section-badge">Tentang NUSATRAVEL</span>
+                <h2>Syarikat Pelancongan Yang Disasarkan Untuk Kepuasan Anda</h2>
+                <div class="header-line-left"></div>
+                <p class="lead text-red">Kami menawarkan pengalaman percutian yang terancang, selesa, dan bebas tekanan
+                    sepenuhnya.</p>
+                <p>Sebagai agensi pelancongan profesional, NUSATRAVEL berdedikasi untuk menyediakan pakej percutian
+                    premium yang utuh dengan harga yang amat kompetitif. Pengalaman tempahan yang pantas, jadual
+                    perjalanan teliti, dan sokongan padu adalah janji kami kepada setiap pelanggan.</p>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <h4 class="text-red">5+</h4>
+                        <p>Tahun Pengalaman</p>
+                    </div>
+                    <div class="stat">
+                        <h4 class="text-red">50+</h4>
+                        <p>Destinasi Menawan</p>
+                    </div>
+                    <div class="stat">
+                        <h4 class="text-red">10k+</h4>
+                        <p>Pelanggan Gembira</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image flex-half reveal fade-left delay-2">
+                <div class="solid-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Travel Experience" loading="lazy">
+                    <div class="image-accent-box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Grid -->
+    <section class="features-section py-large bg-dark text-white">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <h2 class="text-white">Kenapa Pilih NUSATRAVEL?</h2>
+                <div class="header-line-center-white"></div>
+                <p style="color: #ccc;">Kelebihan kukuh yang membezakan kami untuk menjamin percutian bertaraf dunia.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card dark-card reveal fade-up delay-1">
+                    <div class="icon bg-red-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Trusted Planner</h3>
+                    <p>Agensi berdaftar yang diyakini dengan rekod cemerlang menguruskan percutian pelanggan tanpa
+                        kompromi kualiti.</p>
+                </div>
+                <div class="feature-card dark-card reveal fade-up delay-2">
+                    <div class="icon bg-red-icon"><i class="fas fa-mouse-pointer"></i></div>
+                    <h3>Easy Booking</h3>
+                    <p>Proses penempahan yang ringkas, pantas dan telus sepenuhnya tanpa sebarang hidden caj.</p>
+                </div>
+                <div class="feature-card dark-card reveal fade-up delay-3">
+                    <div class="icon bg-red-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Pakej bernilai eksklusif namun ditawarkan dengan harga yang sangat luar biasa berpatutan di
+                        pasaran.</p>
+                </div>
+                <div class="feature-card dark-card reveal fade-up delay-4">
+                    <div class="icon bg-red-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Pro Management</h3>
+                    <p>Pasukan pengurusan dan tour guide super berpengalaman memastikan transisi setiap trip anda
+                        sempurna.</p>
+                </div>
+                <div class="feature-card dark-card reveal fade-up delay-5">
+                    <div class="icon bg-red-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h3>Global Destinations</h3>
+                    <p>Pilihan kukuh rentas benua dan destinasi antarabangsa yang epik merangkumi lokasi eksotik dan
+                        popular.</p>
+                </div>
+                <div class="feature-card dark-card reveal fade-up delay-6">
+                    <div class="icon bg-red-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Responsive Support</h3>
+                    <p>Khidmat pelanggan komited, pantas dan mesra yang pantang menyerah membantu anda setiap masa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="testimonials-section py-large bg-white">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <h2>Apa Kata Pelanggan Kami</h2>
+                <div class="header-line"></div>
+                <p>Kisah dan pengalaman 5-bintang yang dikongsi oleh pelanggan tercinta NUSATRAVEL.</p>
+            </div>
+
+            <div class="testimonial-slider reveal fade-up delay-2">
+                <div class="testimonial-card solid-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote">"Sangat recommended! Tour guide pro dan makanan disediakan berkelas tinggi. Rasa
+                        seperti trip vvip walaupun harga marhaen."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <div class="avatar shadow-red">AN</div>
+                        <div class="user-info">
+                            <h5>Ahmad Naufal</h5>
+                            <span>Jakarta Bandung</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card solid-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote">"Balkan Trip idaman saya jadi realiti dengan NUSATRAVEL. Itinerari yang terancang,
+                        hotel premium dan momen yang mahal."</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <div class="user">
+                        <div class="avatar shadow-red">SZ</div>
+                        <div class="user-info">
+                            <h5>Siti Zulaikha</h5>
+                            <span>Kembara Balkan</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card solid-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote">"Booking dengan admin sangat smooth dan pantas. Segalanya jelas tanpa hidden caj.
+                        Trip Korea kami 100% sangat sempurna!"</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="user">
+                        <div class="avatar shadow-red">FM</div>
+                        <div class="user-info">
+                            <h5>Faizal & Keluarga</h5>
+                            <span>Pakej Korea</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-large bg-light">
+        <div class="container">
+            <div class="section-header text-center reveal fade-up">
+                <h2>Soalan Lazim (FAQ)</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="faq-accordion reveal fade-up delay-1">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Bagaimana untuk menempah pakej?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-inner-content">
+                            <p>Anda boleh menempah dengan menekan butang 'View Details' pada pakej pilihan dan klik
+                                'Tempah'. Anda akan terus dialihkan kepada ejen jualan kami di WhatsApp untuk pengesahan
+                                slot.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Adakah tiket penerbangan antarabangsa termasuk?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-inner-content">
+                            <p>Terdapat pakej 'All-in' di mana penerbangan disertakan, dan ada pakej 'Ground Sahaja'.
+                                Rujuk butiran pakej "Tidak Termasuk" atau berhubung terus dengan kami untuk maklumat
+                                jelas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Boleh ubah tarikh untuk trip tersendiri (Private)?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-inner-content">
+                            <p>Sangat dialu-alukan! Untuk percutian private, kami bersedia menyesuaikan 100% tarikh,
+                                masa lawatan, dan itinerari demi menjayakan trip anda bersama keluarga/rakan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Apakah kaedah bayaran?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-inner-content">
+                            <p>Pembayaran secara deposit dibenarkan untuk kunci tempat (lock seat). Baki selebihnya
+                                boleh dibayar secara kemas bertahap dengan jadual pembayaran yang lebih fleksibel
+                                melalui online bank transfer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Enquiry Section -->
+    <section id="hubungi" class="contact-section py-large bg-white">
+        <div class="container flex-row align-start">
+            <div class="contact-info flex-half reveal fade-right">
+                <div class="section-header">
+                    <h2>Hubungi Kami</h2>
+                    <div class="header-line-left"></div>
+                    <p class="font-bold py-1">Bertindak sekarang! Kami sedia merealisasikan trip bersejarah yang dinanti
+                        nantikan oleh anda.</p>
+                </div>
+
+                <div class="info-items">
+                    <div class="info-card">
+                        <div class="icon-solid"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>HQ NUSATRAVEL</h4>
+                            <p>Symphony Square, Pusat Perdagangan, 40000 Shah Alam, SDE.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-solid"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Talian Rasmi</h4>
+                            <p class="font-bold text-red">+60 12-345 6789</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon-solid"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Emel Bantuan</h4>
+                            <p>hello@nusatravel.com.my</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whatsapp-direct box-shadow-red rounded mt-2 banner-wa">
+                    <h4>Direct WhatsApp</h4>
+                    <p>Respon 3x lebih pantas berbanding emel.</p>
+                    <a href="https://wa.me/60123456789?text=Hi%20NusaTravel,%20saya%20berminat!" target="_blank"
+                        class="btn btn-whatsapp mt-1"><i class="fab fa-whatsapp"></i> Chat Ejen Kami</a>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper flex-half reveal fade-left delay-2 border-red-top">
+                <form class="enquiry-form" id="enquiryForm">
+                    <h3>Borang Pertanyaan</h3>
+                    <div class="form-group">
+                        <label for="name">Nama Penuh Wakil</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">No Telefon / WhatsApp</label>
+                        <input type="tel" id="phone" placeholder="+60123456789" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="interest">Destinasi Tinjauan</label>
+                            <select id="interest" required>
+                                <option value="" disabled selected>Pilih region...</option>
+                                <option value="Eropah">Eropah / Balkan</option>
+                                <option value="China">China</option>
+                                <option value="Korea/Jepun">Korea / Jepun</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Lain-lain">Lain-lain</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pax">Anggaran Peserta (Pax)</label>
+                            <input type="number" id="pax" min="1" placeholder="4" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesanan Khas</label>
+                        <textarea id="message" rows="4"
+                            placeholder="Tinggalkan permintaan atau soalan anda..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Hantar Permintaan <i
+                            class="fas fa-arrow-right ml-1"></i></button>
+                    <p class="form-disclaimer text-center mt-1"><small><i class="fas fa-lock text-red"></i> 100% Data
+                            Disulitkan & Terlindung.</small></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid reveal fade-up">
+            <div class="footer-brand">
+                <a href="#" class="brand-logo footer-logo">NUSA<span class="text-red">TRAVEL</span></a>
+                <p>Agensi pelacongan terkemuka menawarkan pengalaman mengembara tanpa tandingan. Solid, selamat, dan
+                    memuaskan. Tempah dengan keyakinan maksimum.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#home">Laman Utama</a></li>
+                    <li><a href="#pakej">Katalog Pakej</a></li>
+                    <li><a href="#tentang-kami">Profil Syarikat</a></li>
+                    <li><a href="#faq">Pelanggan FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Destinasi Utama</h4>
+                <ul>
+                    <li><a href="#">Eropah Premium</a></li>
+                    <li><a href="#">Balkan Heritage</a></li>
+                    <li><a href="#">China Eksotik</a></li>
+                    <li><a href="#">Indonesia Klasik</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom reveal fade-up delay-1">
+            <div class="container flex-row footer-bottom-content">
+                <p>&copy; 2026 <strong>NUSATRAVEL</strong>. Hak Cipta Terpelihara. Travel with confidence.</p>
+                <div class="legal-links">
+                    <a href="#">Terma & Syarat</a>
+                    <a href="#">Polisi Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
