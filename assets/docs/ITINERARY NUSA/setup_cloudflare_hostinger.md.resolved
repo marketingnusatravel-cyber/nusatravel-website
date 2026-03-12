@@ -1,0 +1,56 @@
+# PANDUAN LENGKAP: SETUP CUSTOM DOMAIN (HOSTINGER ➔ CLOUDFLARE PAGES)
+
+Panduan ini disediakan secara khusus untuk anda menyambungkan nama domain yang dibeli di **Hostinger** (contoh: `nusatravel.io` atau `nusatravel.online`) ke laman web percuma (Pages) di **Cloudflare**.
+
+Ikut urutan proses A, B, dan C ini dengan teliti.
+
+---
+
+## FASA A: MATIKAN SAMBUNGAN LAMA (DI CLOUDFLARE)
+
+*(Ini adalah untuk menyelesaikan masalah error: "This domain is already in use" dalam Cloudflare)*
+
+1. Log masuk ke akaun **Cloudflare**.
+2. Di skrin *Account Home* (Laman Utama), klik padanamadomain anda di bawah senarai "Websites" (contoh: klik **`nusatravel.io`**).
+3. Tengok menu di sebelah KIRI, cari dan klik pada menu **DNS** ➔ kemudian **Records**.
+4. Anda akan nampak satu jadual panjang menyenaraikan fungsi-fungsi domain (seperti `A`, `CNAME`, `MX`).
+5. Cari mana-mana rekod bernama `A` atau `CNAME` yang menggunakan secara terus nama domain utama anda itu.
+6. Pergi ke hujung baris rekod tersebut, klik tulisan **Edit**, kemudian cari pilihan **Delete** (Padam). 
+   - *Matlamat: Kita mahu kosongkan "tempat parking kereta" supaya website Pages kita boleh masuk parking nanti.*
+
+---
+
+## FASA B: BERIKAN KUASA KEPADA CLOUDFLARE (DI HOSTINGER)
+
+*(Langkah ini adalah yang PALING PENTING. Tanpa mengubah Nameservers, skrin "Waiting for Registrar" di Cloudflare tidak akan pernah hilang.)*
+
+1. Buka satu tab/tingkap baru di *Browser*, dan Log Masuk ke akaun **hPanel Hostinger** anda (tempat di mana nama itu dibeli).
+2. Di barisan menu atas sekali, tekan butang **Domains**.
+3. Di dalam senarai pelbagai domain anda, cari nama domain anda (contoh `nusatravel.io`) dan klik butang **Manage**.
+4. Di panel menu sebelah KIRI, klik fungsi **DNS / Nameservers**.
+5. Di bahagian kotak tengah skrin, cari dan klik butang berbentuk **Change Nameservers**.
+6. **Mesti padamkan (Delete) segala tulisan *Nameserver* lama** yang terpapar (Biasanya ia kelihatan seperti *`ns1.dns-parking.com`* dan `ns2.dns-parking.com`).
+7. **Tampal (Paste)** dua (2) tulisan kod *Nameserver* baharu yang Cloudflare bekalkan kepada anda *(Rujuk emel atau skrin "Pending" Cloudflare anda untuk mendapatkannya, contoh: `adam.ns.cloudflare.com` & `eva.ns.cloudflare.com`)*. 
+8. Klik butang **Save** (Simpan). Abaikan apa sahaja kotak amaran dari sistem Hostinger. 
+
+*(Rehat Sebentar: Selepas melaksanakan FASA B ini dengan lengkap, perubahan kepada trafik seluruh dunia akan mengambil masa di antara **15 Minit sehingga 2 Jam**). Sistem Cloudflare akan menghantar emel makluman kejayaan secara rasmi.*
+
+---
+
+## FASA C: SAMBUNGKAN KOD WEBSITE KITA (DI CLOUDFLARE PAGES)
+
+*(Hanya lakukan FASA ini selepas anda berjaya melepasi tahap menunggu di FASA B, dan berjaya mendapat isyarat kehijauan "Active" daripada sistem Cloudflare).*
+
+1. Kembali Log masuk akaun **Cloudflare**.
+2. Di menu KIRI *Account Home*, cari dan letakkan penunjuk (Klik) pada aplikasi **Workers & Pages**.
+3. Di paparan skrin sebelah kanan, pandang di bawah tajuk senarai projek dan klik tajuk projek website anda: **`websitenusatravel`**.
+4. Tepat pada lajur tajuk projek itu, anda akan melihat pelbagai tab (*Overview*, *Metrics*, *Deployments*), sila klik tab **Custom Domains**. (Atau ia juga boleh didapati di dalam tab *Settings ➔ Domains & Routes*).
+5. Klik pada butang petak biru gergasi **"Set up a custom domain"** (atau butang teks biru kecil "+ Add").
+6. Sebuah kotak penaipan pendek akan terpapar. Sila **MENAIP NAMA DOMAIN** Hostinger anda secara mutlak dengan ejaan yang TEPAT tanpa 'typo' (Contoh: **`www.nusatravel.io`** atau **`nusatravel.online`**).
+7. Klik butang biru **Continue**.
+8. Cloudflare kemudiannya akan memaparkan rekod CNAME laluan pengesahan, abaikan kefahaman itu dan **terus tamatkan proses dengan menekan butang biru: "Activate domain"**.
+
+### KEPUTUSAN (RESULT): 
+Lebih kurang 2 Minit pemprosesan putar tamat, satu tanda "**Active**" (berada pada bulatan kecil status warna hijau) akan menghiasi status domain anda disebelahnya. Maksud rasminya kedai laman rasmi (website html kita tadi) kini telahpun dibuka, terkunci secara percuma (SSL HTTPS), dan kini boleh dicari oleh seisi pelanggan pada Carian enjin internet global!
+
+**Siap dan Tahniah.** 🚀
